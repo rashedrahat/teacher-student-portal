@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div align="center">
+<h2>Login Portal</h2>
+<form method="post">
+Username:<br>
+<input type="text" name="uname">
+<br>
+Password:<br>
+<input type="password" name="pass">
+<br><br>
+<input type="submit" class="btn btn-sm btn-primary" value="Log In">
+</form>
+</div>
+<div align="center">
+<% if (errors) { %>
+<div>
+                                        <% errors.forEach(function(errors) { %>
+                                            <h4><%= errors.msg %> </h4>
+
+
+                     <% });
+                     } %>
+</div>
+</div>
+
+</body>
+</html>

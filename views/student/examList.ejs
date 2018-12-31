@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div align="center">
+		<h2>Exam List!</h2>
+
+		<a href="/student">Back</a>
+		
+		<table border="1">
+			<tr>
+				<th>Exam Id</th>
+				<th>ACTION</th>
+			</tr>
+			<% for(var i = 0; i < examList.length; i++){ %>
+
+			<tr>
+				<td><%= examList[i].id %></td>
+				<td><a href="/student/edit/<%= examList[i].id %>">Edit</a> | <a href="/student/delete/<%= examList[i].id %>"> Delete</a> </td>
+			</tr>
+			
+			<% } %>
+
+		</table>
+	</div>
+</body>
+</html>

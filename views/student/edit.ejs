@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+<body>
+	<div align="center">
+			<h2>Edit your answers...</h2>
+
+			<form method="post">
+			
+				<a href="/student/examlist">Back</a>
+				<table border="0">
+					<tr>
+						<td>Id</td>
+						<td><%= answer.id %></td>
+						<input type="hidden" name="id" value="<%= answer.id %>">
+					</tr>
+					<tr>
+						<td>Q1</td>
+						<td><input type="text" name="a1" value="<%= answer.ans1 %>"></td>
+					</tr>
+					<tr>
+						<td>Q2</td>
+						<td><input type="text" name="a2" value="<%= answer.ans2 %>"></td>
+					</tr>
+					<tr>
+						<td>Q3</td>
+						<td><input type="text" name="a3" value="<%= answer.ans3 %>"></td>
+					</tr>
+					<tr>
+						<td>Q4</td>
+						<td><input type="text" name="a4" value="<%= answer.ans4 %>"></td>
+					</tr>
+					<tr>
+						<td>Q5</td>
+						<td><input type="text" name="a5" value="<%= answer.ans5 %>"></td>
+					</tr>
+					<tr>
+						<td>Q6</td>
+						<td><input type="text" name="a6" value="<%= answer.ans6 %>"></td>
+					</tr>
+					<tr>
+						<td>Q7</td>
+						<td><input type="text" name="a7" value="<%= answer.ans7 %>"></td>
+					</tr>
+					<tr>
+						<td>Q8</td>
+						<td><input type="text" name="a8" value="<%= answer.ans8 %>"></td>
+					</tr>
+					<tr>
+						<td>Q9</td>
+						<td><input type="text" name="a9" value="<%= answer.ans9 %>"></td>
+					</tr>
+					<tr>
+						<td>Q10</td>
+						<td><input type="text" name="a10" value="<%= answer.ans10 %>"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" name="submit" value="Save" class="btn btn-sm btn-primary"/></td>
+						<td></td>
+					</tr>
+				</table>
+			</form>
+	</div>
+</body>
+</html>

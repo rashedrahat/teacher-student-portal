@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+	<h2>Create a student profile.</h2>
+
+<form method="post">
+	<table border="0">
+		<tr>
+			<td>Student Name</td>
+			<td><input type="text" name="name" value=""></td>
+		</tr>
+		<tr>
+			<td>User Name</td>
+			<td><input type="text" name="uname" value=""></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="pass" value=""></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td><input type="text" name="user" value="Student"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit" value="Save" class="btn btn-sm btn-primary"/></td>
+			<td></td>
+		</tr>
+	</table>
+</form>
+<a href="/teacher">Cancel</a>
+</div>
+<div align="center">
+<% if (errors) { %>
+<div>
+                                        <% errors.forEach(function(errors) { %>
+                                            <h4><%= errors.msg %> </h4>
+
+
+                     <% });
+                     } %>
+</div>
+</div>
+</body>
+</html>

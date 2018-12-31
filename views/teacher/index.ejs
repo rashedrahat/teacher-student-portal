@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="jQuery-UI/jquery-ui.structure.css"/>
+	<link rel="stylesheet" type="text/css" href="jQuery-UI/jquery-ui.css"/>
+	<script type="text/javascript" src="jQuery-UI/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="jQuery-UI/jquery-ui.theme.css"/>
+</head>
+<body>
+
+<div align="center">
+<h2>Welcome, <span><small><%= sessUname %></small></span></h2>
+
+<a href="teacher/studentlist">User List</a> | <a href="teacher/addstudent">Register New Student</a> | <a href="/login">Log Out</a>
+<br/><br/>
+
+  Search Student:
+  <input type="search" name="studentSearch" class="tags">
+  <button class="btn btn-sm btn-success">Search</button>
+<div id="sr"></div>
+</div>
+<script>
+	$(document).ready(function(){
+			var availableStudents = [
+	      "Rashed",
+	      "Ahmed",
+	      "Rahat"
+	    ];
+	    $( ".tags" ).autocomplete({
+	      source: availableStudents
+	    });
+	    $("button").click(function(){
+
+	    	$.ajax({
+				url:"/teacher/getresult",
+				method:"post",
+				data:{
+					name:$('.tags').val()
+				},
+			success:function(response){
+			$("#sr").html("<table border='1'><tr><th>ID</th><th>User Name</th><th>Name</th><th>Password</th><th>Type</th></tr><tr><td>"+response.id+"</td> <td>"+response.username+"</td> <td>"+response.name+"</td><td>"+response.password+"</td> <td>"+response.type+"</td></tr></table>");
+		}
+	});
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div align="center">
+		<h2>Edit student info.</h2>
+
+		<form method="post">
+
+			<a href="/teacher/studentlist">Back</a>
+			<table border="0">
+				<tr>
+					<td>Id</td>
+					<td><%= user.id %></td>
+					<input type="hidden" name="id" value="<%= user.id %>">
+				</tr>
+				<tr>
+					<td>Student Name</td>
+					<td><input type="text" name="name" value="<%= user.name %>"></td>
+				</tr>
+				<tr>
+					<td>User Name</td>
+					<td><input type="text" name="uname" value="<%= user.username %>"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="pass" value="<%= user.password %>"></td>
+				</tr>
+				<tr>
+					<td>Type</td>
+					<td><input type="text" name="user" value="<%= user.type %>"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="submit" value="Save"  class="btn btn-sm btn-primary"/></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
